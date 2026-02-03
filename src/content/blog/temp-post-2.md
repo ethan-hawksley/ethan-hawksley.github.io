@@ -1,5 +1,5 @@
 ---
-title: 'Temp Post 2'
+title: 'Temp Post 2 with an extremely long title blah blah blah blah blah'
 description: 'Lorem Ipsum Dolor'
 pubDate: 2026-2-1
 modifiedDate: 2026-2-2
