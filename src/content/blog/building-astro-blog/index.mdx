@@ -5,9 +5,9 @@ pubDate: 2026-2-4
 tags: ['astro', 'web']
 ---
 
-I've owned the domain name hawksley.dev for a while now, but I've never done much with it aside from sending e-mail. Over the weekend, I thought I might as well make good use of it and decided to create a blog.
+I've owned the domain name hawksley.dev for a while now, but I've never done much with it aside from sending email. Over the weekend, I thought I might as well make good use of it and decided to create a blog.
 
-In the beginning, this site had a humble home page with some links to GitHub projects. A blog requires much more infrastructure for me to use it effectively. For one, it'd be great if I could just write my posts in Markdown and have them formatted by my project automatically. Having a look at the options available, the first that stuck out was [GitHub's Jekyll](https://jekyllrb.com/). It looked nice and had great integration with GitHub Pages, which is at the time of writing what I'm hosting with. However, it just felt too rigid and inflexible. I needed something modern that I felt I could get my hands dirty with.
+In the beginning, this site had a humble home page with some links to GitHub projects. A blog requires much more infrastructure for me to use it effectively. For one, it'd be great if I could just write my posts in Markdown and have them formatted by my project automatically. Having a look at the options available, the first that stood out was [GitHub's Jekyll](https://jekyllrb.com/). It looked nice and had great integration with GitHub Pages, which I'm hosting with at the time of writing. However, it just felt too rigid. I needed something modern that I felt I could get my hands dirty with.
 
 Enter Astro.
 
@@ -17,11 +17,11 @@ In the grand scheme of things, [the Astro framework](https://astro.build/) is pr
 
 Learning how to work with Astro was completely painless. I created a new GitHub repository and followed along with their very high-quality documentation to create a blog of my own. At the very end of it, I’d created a nice neat blog that loaded instantly and was easy to write for.
 
-I wasn't satisfied by using the tutorial's blog for my site, though, as it felt too cookie cutter, and so I started again now with confidence in the framework.
+I wasn't satisfied by using the tutorial's blog for my site, though, as it felt too cookie-cutter, and so I started again, now with confidence in the framework.
 
 ## The Design Decisions
 
-There were some definite design decisions I knew I wanted from the get-go. First-class light mode and dark mode support were a must. Plenty of blogs offered just one or the other, and after a bit of digging, it didn't seem hard to technically implement at all.
+There were some definite design decisions I knew I wanted from the get-go. First-class light mode and dark mode support were a must. Plenty of blogs offered just one or the other, and after a bit of digging, it didn't seem technically hard to implement at all.
 
 Another key principle was mobile-first design. Many of my previous projects started with the key assumption that the reader will be on a laptop or desktop, but that often isn't the case. Mobile devices account for approximately two-thirds of global internet traffic, with the remaining third coming from desktops. I wanted this site to stand the test of time until I inevitably rebuild it again, so it's only natural I designed it with mobile devices in mind.
 
@@ -43,9 +43,9 @@ src
 
 Development went very smoothly over two days and 15 full hours, with only some minor hiccups along the way.
 
-Google's PageSpeed Insights flagged my planned accent colour International Orange `#FF4F00` as having insufficient contrast in light mode, so I had to split to separate accents for light and dark mode. By using global CSS variables that change depending on the theme, implementing this change was painless.
+Google's PageSpeed Insights flagged my planned accent colour International Orange `#FF4F00` as having insufficient contrast in light mode, so I had to split into separate accents for light and dark mode. By using global CSS variables that change depending on the theme, I implemented this change painlessly.
 
-I also encountered some <abbr title="Content Layout Shift">CLS</abbr> issues surrounding my choice of font. I personally love the look of the [Inter font](https://rsms.me/inter/) and included it in my project. However, although 300 KiB may not sound like a lot, on a slow connection it’s a noticeable delay. After some research I discovered the [fontTools library](https://github.com/fonttools/fonttools) and managed to shrink down the Inter font to 70 KiB by subsetting the font to only include the character sets I need.
+I also encountered some <abbr title="Content Layout Shift">CLS</abbr> issues surrounding my choice of font. I personally love the look of the [Inter font](https://rsms.me/inter/) and included it in my project. However, although 300 KiB may not sound like a lot, on a slow connection it’s a noticeable delay. After some research I discovered the [fontTools library](https://github.com/fonttools/fonttools) and managed to shrink the Inter font to 70 KiB by subsetting the font to only the character sets I need.
 
 ## The Conclusion
 
